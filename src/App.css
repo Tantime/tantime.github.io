@@ -9,7 +9,7 @@
 .home,
 .code,
 /* .art, */
-.about-me {
+.about {
     display: flex;
     height: 90vh;
     align-items: center;
@@ -35,7 +35,7 @@
     font-size: 100px;
 }
 
-.about-me {
+.about {
     background-image: url('/public/images/img-8.jpg');
     background-position: center;
     background-size: cover;
