@@ -78,7 +78,7 @@
 
 @media screen and (max-width: 768px) {
     .NavbarItems {
-        position: center;
+        position: relative;
     }
 
     .nav-menu {
