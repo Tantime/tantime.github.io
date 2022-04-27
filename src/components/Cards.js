@@ -11,31 +11,31 @@ function Cards() {
                 <ul className='cards__items'>
                     <CardItem 
                     src='images/img-9.jpg' 
-                    text='Explore the hidden waterfall deep inside the Amazon Jungle'
-                    label='Adventure'
-                    path='/ios-dev' />
+                    text='Twitter, Instagram, and Netflix iOS Clones'
+                    label='iOS Dev'
+                    path='/ios-clones' />
                     <CardItem 
                     src='images/img-2.jpg' 
-                    text='Travel through the Islands of Bali on a Private Cruise'
-                    label='Luxury'
-                    path='/hydrate' />
+                    text='Marathon. (SD Hacks 2022 Community Winner)'
+                    label='UI/UX Design'
+                    path='/marathon' />
                 </ul>
                 <ul className='cards__items'>
                     <CardItem
                     src='images/img-3.jpg'
-                    text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
-                    label='Mystery'
-                    path='/android-dev' />
+                    text='SikFan, a recipe app'
+                    label='Android Dev'
+                    path='/recipes-app' />
                     <CardItem
                     src='images/img-4.jpg'
-                    text='Experience Futbol on Top of the Himilayan Mountains'
-                    label='Adventure'
-                    path='/products' />
+                    text='HYDRATE, a hydration reminder device'
+                    label='Electrical Solution'
+                    path='/hydrate' />
                     <CardItem
                     src='images/img-8.jpg'
-                    text='Ride through the Sahara Desert on a guided Camel Tour'
-                    label='Adrenaline'
-                    path='/sign-up' />
+                    text='CSE 15 Lab Reports - Software Tools and Techinques'
+                    label='Documentation'
+                    path='/cse15-lab-reports' />
                 </ul>
             </div>
         </div>

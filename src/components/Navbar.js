@@ -11,7 +11,7 @@ function Navbar() {
     const closeMobileMenu = () => setClick(false);
 
     const showButton = () => {
-        if(window.innerWidth <= 768) {
+        if(window.innerWidth <= 960) {
             setButton(false);
         } else {
             setButton(true);
@@ -55,11 +55,17 @@ function Navbar() {
                                 About
                             </Link>
                         </li>
+                        
+                        <li>
+                            <Link to='https://github.com/Tantime' target='_blank' className='nav-links-mobile' onClick={closeMobileMenu}>
+                                GitHub &nbsp;
+                                <i class="fa-brands fa-github"></i>
+                            </Link>
+                        </li>
                     </ul>
                     {button && <Button buttonStyle='btn--outline' 
                         onClick={(e) => {
                             e.preventDefault();
-                            // window.location.href='https://github.com/Tantime';
                             window.open('https://github.com/Tantime', '_blank');
                         }}
                         >GitHub &nbsp;
