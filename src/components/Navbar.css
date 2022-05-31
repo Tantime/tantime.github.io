@@ -18,6 +18,21 @@
     max-width: 1500px;
 }
 
+.navbar-container-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+span {
+    width: 25px;
+    height: 25px;
+}
+
 .navbar-logo {
     color: #fff;
     justify-self: start;
@@ -37,7 +52,7 @@
 
 .nav-menu {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(5, auto);
     gap: 10px;
     list-style: none;
     text-align: center;
@@ -69,7 +84,7 @@
 }
 
 .nav-links-mobile {
-    display: none; 
+    display: none;
 }
 
 .menu-icon {
@@ -85,7 +100,7 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: 90vh;
+        height: 92vh;
         position: absolute;
         top: 80px;
         left: -100%;

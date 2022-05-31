@@ -24,6 +24,19 @@ function Navbar() {
 
     window.addEventListener('resize', showButton);
 
+    const audioToggle = () => {
+        const elems = document.querySelectorAll("video, audio");
+        for(const el of elems) {
+            if(el.muted === true) {
+                el.muted = false
+                // el.innerHTML = <i class="fa-solid fa-volume-high"></i>
+            } else {
+                el.muted = true
+                // el.innerHTML = <i class="fa-solid fa-volume-xmark"></i>
+            }
+        }
+    }
+
     return (
         <>
             <nav className='navbar'>
@@ -63,14 +76,26 @@ function Navbar() {
                             </Link>
                         </li>
                     </ul>
-                    {button && <Button buttonStyle='btn--outline' 
-                        onClick={(e) => {
-                            e.preventDefault();
-                            window.open('https://github.com/Tantime', '_blank');
-                        }}
-                        >GitHub &nbsp;
-                        <i class="fa-brands fa-github"></i>
-                    </Button>}
+                    <div className='navbar-container-2'>
+                        {button && <Button buttonStyle='btn--outline' 
+                            onClick={(e) => {
+                                e.preventDefault();
+                                window.open('https://github.com/Tantime', '_blank');
+                            }}
+                            >GitHub &nbsp;
+                            <i class="fa-brands fa-github"></i>
+                        </Button>}
+                        <span></span>
+                        <span></span>
+                        {button && <Button buttonStyle='btn--outline'
+                            onClick={(e) => {
+                                e.preventDefault();
+                                audioToggle();
+                            }}
+                            >
+                            <i class="fa-solid fa-volume-high"></i>
+                        </Button>}
+                    </div>
                 </div>
             </nav>
         </>
