@@ -6,7 +6,7 @@ import './HeroSection.css';
 function HeroSection() {
   return (
     <div className='hero-container'>
-        <video src='/videos/WALL-E Ending.mp4' autoPlay loop />
+        <video src='/videos/WALL-E Ending.mp4' autoPlay loop muted />
         <h1>MATTHEW TAN</h1>
         <p>WALL·E really is the GOAT.</p>
         {/* <div className='hero-btns'>

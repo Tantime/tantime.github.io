@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
-import { BrowserRouter as Router, Routes, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Code from './components/pages/Code';
 import Art from './components/pages/Art';
+import ScrollToTop from './components/functionality/ScrollToTop';
 
 function App() {
     // const [showHome, setShowHome] = useState(false);

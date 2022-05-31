@@ -10,30 +10,30 @@ function Cards() {
             <div className='cards__wrapper'>
                 <ul className='cards__items'>
                     <CardItem 
-                    src='images/img-9.jpg' 
-                    text='Twitter, Instagram, and Netflix iOS Clones'
+                    src='images/iOS phone screen.png' 
+                    text='iOS Clones | Twitter, Instagram, and Netflix'
                     label='iOS Dev'
                     path='/ios-clones' />
                     <CardItem 
-                    src='images/img-2.jpg' 
-                    text='Marathon. (SD Hacks 2022 Community Winner)'
+                    src='images/marathon1.jpg' 
+                    text='Marathon | SD Hacks 2022 Community Winner'
                     label='UI/UX Design'
                     path='/marathon' />
                 </ul>
                 <ul className='cards__items'>
-                    <CardItem
-                    src='images/img-3.jpg'
-                    text='SikFan, a recipe app'
+                    <CardItem 
+                    src='images/sikfan3.jpg'
+                    text='SikFan | Recipe Android App'
                     label='Android Dev'
                     path='/recipes-app' />
-                    <CardItem
-                    src='images/img-4.jpg'
-                    text='HYDRATE, a hydration reminder device'
-                    label='Electrical Solution'
+                    <CardItem 
+                    src='images/hydrate1.png'
+                    text='HYDRATE | Hydration Reminder Device'
+                    label='Electrical'
                     path='/hydrate' />
-                    <CardItem
-                    src='images/img-8.jpg'
-                    text='CSE 15 Lab Reports - Software Tools and Techinques'
+                    <CardItem 
+                    src='images/cse15lab2.jpg'
+                    text='Software Tools and Techniques | CSE 15 Lab Reports'
                     label='Documentation'
                     path='/cse15-lab-reports' />
                 </ul>
