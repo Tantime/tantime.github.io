@@ -42,7 +42,10 @@ function Navbar() {
             <nav className='navbar'>
                 <div className='navbar-container'>
                     <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-                        MZT <i className="fab fa-typo3" />
+                        MZT
+                        {/* <i className="fab fa-typo3" /> */}
+                        <span/>
+                        <i class="fa-solid fa-bowl-food"></i>
                     </Link>
                     <div className='menu-icon' onClick={handleClick}>
                         <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -68,7 +71,6 @@ function Navbar() {
                                 About
                             </Link>
                         </li>
-                        
                         <li>
                             <Link to='https://github.com/Tantime' target='_blank' className='nav-links-mobile' onClick={closeMobileMenu}>
                                 GitHub &nbsp;
@@ -85,7 +87,7 @@ function Navbar() {
                             >GitHub &nbsp;
                             <i class="fa-brands fa-github"></i>
                         </Button>}
-                        <span></span>
+                        {/* <span></span>
                         <span></span>
                         {button && <Button buttonStyle='btn--outline'
                             onClick={(e) => {
@@ -94,7 +96,7 @@ function Navbar() {
                             }}
                             >
                             <i class="fa-solid fa-volume-high"></i>
-                        </Button>}
+                        </Button>} */}
                     </div>
                 </div>
             </nav>

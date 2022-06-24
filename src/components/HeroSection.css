@@ -21,13 +21,13 @@ video {
 .hero-container > h1 {
     color: #fff;
     font-size: 100px;
-    margin-top: -100px;
+    margin-top: -150px;
     letter-spacing: 4pt;
 }
 
 .hero-container > p {
     color: #fff;
-    font-size: 32px;
+    font-size: 20px;
     margin-top: 8px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     letter-spacing: 4pt;
@@ -52,18 +52,20 @@ video {
     }
 
     .hero-container > p {
-        font-size: 22.4px;
+        font-size: 14px;
+        letter-spacing: 4px;
     }
 }
 
 @media screen and (max-width: 768px) {
     .hero-container > h1 {
         font-size: 50px;
-        margin-top: -100px;
+        margin-top: -150px;
     }
 
     .hero-container > p {
-        font-size: 16px;
+        font-size: 14px;
+        letter-spacing: 3px;
     }
 
     .btn-mobile {

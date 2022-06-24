@@ -13,29 +13,29 @@ function Cards() {
                     src='images/iOS phone screen.png' 
                     text='iOS Clones | Twitter, Instagram, and Netflix'
                     label='iOS Dev'
-                    path='/ios-clones' />
+                    path='/code/ios-clones' />
                     <CardItem 
                     src='images/marathon1.jpg' 
                     text='Marathon | SD Hacks 2022 Community Winner'
                     label='UI/UX Design'
-                    path='/marathon' />
+                    path='/code/marathon' />
                 </ul>
                 <ul className='cards__items'>
                     <CardItem 
                     src='images/sikfan3.jpg'
                     text='SikFan | Recipe Android App'
                     label='Android Dev'
-                    path='/recipes-app' />
+                    path='/code/recipes-app' />
                     <CardItem 
                     src='images/hydrate1.png'
                     text='HYDRATE | Hydration Reminder Device'
                     label='Electrical'
-                    path='/hydrate' />
+                    path='/code/hydrate' />
                     <CardItem 
                     src='images/cse15lab2.jpg'
                     text='Software Tools and Techniques | CSE 15 Lab Reports'
                     label='Documentation'
-                    path='/cse15-lab-reports' />
+                    path='/code/cse15-lab-reports' />
                 </ul>
             </div>
         </div>
