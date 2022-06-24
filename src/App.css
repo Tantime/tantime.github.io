@@ -18,28 +18,53 @@
 }
 
 .code {
-    background-image: url('/public/images/img-2.jpg');
+    background-image: url('/public/images/img-home.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     color: #fff;
     font-size: 100px;
+    letter-spacing: 4px;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
 }
 
 .art {
-    background-image: url('/public/images/img-1.jpg');
+    background-image: url('/public/images/art2.avif');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     color: #fff;
     font-size: 100px;
+    letter-spacing: 4px;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
 }
 
 .about {
-    background-image: url('/public/images/img-8.jpg');
+    background-image: url('/public/images/img-5.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     color: #fff;
     font-size: 100px;
+    letter-spacing: 4px;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+}
+
+.marathon {
+    
+}
+
+.image-cropper {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+img {
+    display: inline;
+    margin: 0 auto;
+    height: 134%;
+    width: auto;
 }
