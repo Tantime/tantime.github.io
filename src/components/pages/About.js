@@ -6,7 +6,7 @@ export default function About() {
         <>
             <h1 className='about'>ABOUT</h1>
             <div className='image-cropper'>
-                <img src='/images/pfp2.jpg' alt='matthew pfp'/>
+                <img src='/images/pfp3.jpg' alt='matthew pfp'/>
             </div>
         </>
     );
