@@ -4,10 +4,9 @@ import Cards from '../Cards';
 import HeroSection from '../HeroSection';
 
 export default function Art() {
-    return(
-        <>
-            <h1 className='art'>ART</h1>
-            <Cards />
-        </>
-    );
+  return(
+    <>
+      <h1 className='art'>ART</h1>
+    </>
+  );
 }

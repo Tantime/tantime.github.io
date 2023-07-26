@@ -1,0 +1,10 @@
+.img-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  row-gap: 20px;
+}
+
+.slide-img {
+  width: 400px;
+}

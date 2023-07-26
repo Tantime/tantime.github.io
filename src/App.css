@@ -11,7 +11,7 @@
 .art,
 .about {
     display: flex;
-    height: 92vh;
+    height: 95vh;
     align-items: center;
     justify-content: center;
     font-size: 3rem;
@@ -26,6 +26,7 @@
     font-size: 100px;
     letter-spacing: 4px;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    margin: -350px;
 }
 
 .art {
@@ -37,6 +38,7 @@
     font-size: 100px;
     letter-spacing: 4px;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    margin: -350px;
 }
 
 .about {
@@ -48,10 +50,7 @@
     font-size: 100px;
     letter-spacing: 4px;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-}
-
-.marathon {
-    
+    margin: -350px;
 }
 
 .image-cropper {
@@ -67,4 +66,32 @@ img {
     margin: 0 auto;
     height: 134%;
     width: auto;
+}
+
+#figma-embed {
+  border: 10px solid rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  width: 99%;
+  height: 1000px;
+  margin: 10px;
+}
+
+#marathon-container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+}
+
+#marathon-container > h3 {
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  width: 50vw;
+  min-width: 400px;
+  margin: 20px;
+}
+
+#marathon-container > #figma-embed {
+  width: 75vw;
 }

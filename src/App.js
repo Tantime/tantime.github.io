@@ -9,28 +9,7 @@ import Art from './components/pages/Art';
 import IosClones from './components/pages/IosClones';
 import Marathon from './components/pages/Marathon';
 
-import ScrollToTop from './components/functionality/ScrollToTop';
-
 function App() {
-    // const [showHome, setShowHome] = useState(false);
-    
-    // useEffect(() => {
-    //     window.addEventListener('scroll', () => {
-    //         if(window.scrollY > 400) {
-    //             setShowHome(true);
-    //         } else {
-    //             setShowHome(false);
-    //         }
-    //     });
-    // }, []);
-
-    // const goHome = () => {
-    //     window.scrollTo({
-    //         top: 0,
-    //         behavior: 'smooth'
-    //     });
-    // };
-
     return (
         <>
             <Router>
@@ -39,7 +18,7 @@ function App() {
                     <Route exact path='/' element={<Home />} />
                     <Route exact path='about/*' element={<About />} />
                     <Route exact path='code/*' element={<Code />} />
-                    <Route exact path='art/*' element={<Art />} />
+                    {/* <Route exact path='art/*' element={<Art />} /> */}
                     <Route exact path='/code/ios-clones' element={<IosClones />} />
                     <Route exact path='/code/marathon' element={<Marathon />} />
                     {/* <Redirect to='/' /> */}

@@ -4,7 +4,7 @@ import '../../App.css';
 export default function About() {
     return (
         <>
-            <h1 className='about'>ABOUT</h1>
+            <h1 className='about'>Hi, I'm Matthew!</h1>
             <div className='image-cropper'>
                 <img src='/images/pfp3.jpg' alt='matthew pfp'/>
             </div>
