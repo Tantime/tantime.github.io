@@ -9,7 +9,6 @@ export default function IosClones() {
             <div class="github-card" data-github="Tantime" data-width="400" data-height="" data-theme="default"></div>
             <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
             <h1 className='code'>CODE</h1>
-            <Cards />
         </>
     );
 }
