@@ -8,3 +8,31 @@
 .slide-img {
   width: 400px;
 }
+
+#figma-embed {
+  border: 10px solid rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  width: 99%;
+  height: 1000px;
+  margin: 10px;
+}
+
+#marathon-container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+#marathon-container > h3 {
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  width: 50vw;
+  min-width: 400px;
+  margin: 20px;
+}
+
+#marathon-container > #figma-embed {
+  width: 75vw;
+}

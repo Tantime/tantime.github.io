@@ -14,23 +14,25 @@ function HeroSection(props) {
   };
   
   return (
-    <div id='scroll-container' className='hero-container'>
-      <video id='bgvid' alt='bgvid' src={props.src} autoPlay playsInline loop muted />
-        <script>
-            var vid = document.getElementById('bgvid');
-            vid.playbackRate = 0.5;
-        </script>
-        <h1>MATTHEW TAN</h1>
-        <AnimatedText />
-        {/* <div className='hero-btns'>
-            <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large'>
-                GET STARTED
-            </Button>
-            <Button className='btns' buttonStyle='btn--primary' buttonSize='btn--large'>
-                WATCH TRAILER <i className='far fa-play-circle' />
-            </Button>
-        </div> */}
-    </div>
+    <>
+      <div className='hero-container'>
+        <video id='bgvid' alt='bgvid' src={props.src} autoPlay playsInline loop muted />
+          <script>
+              var vid = document.getElementById('bgvid');
+              vid.playbackRate = 0.5;
+          </script>
+          <h1>MATTHEW TAN</h1>
+          <AnimatedText />
+          {/* <div className='hero-btns'>
+              <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large'>
+                  GET STARTED
+              </Button>
+              <Button className='btns' buttonStyle='btn--primary' buttonSize='btn--large'>
+                  WATCH TRAILER <i className='far fa-play-circle' />
+              </Button>
+          </div> */}
+      </div>
+    </>
   );
 }
 
