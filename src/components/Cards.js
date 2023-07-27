@@ -11,7 +11,7 @@ function Cards() {
                 <ul className='cards__items'>
                     <CardItem 
                     src='images/iOS phone screen.png' 
-                    text='iOS Clones | Twitter, Instagram, and Netflix'
+                    text='iOS Development Projects | Twitter, Instagram, and Netflix'
                     label='iOS Dev'
                     path='/code/ios-clones' />
                     <CardItem 

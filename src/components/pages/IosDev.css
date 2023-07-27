@@ -1,0 +1,65 @@
+.container-main {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.container-project {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.container-ios {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  padding-bottom: 24px;
+  width: 380px;
+}
+
+.title {
+  font-family: "SF Pro-Bold", Helvetica;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.description-main {
+  color: #000000;
+  font-family: "SF Pro-Regular", Helvetica;
+  font-weight: 400;
+  text-align: center;
+  white-space: pre-wrap;
+  font-size: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.header {
+  color: #000000;
+  font-family: "SF Pro-Bold", Helvetica;
+  font-weight: 700;
+  font-size: 20px;
+  white-space: pre-wrap;
+  padding: 12px;
+  margin-top: -24px;
+}
+
+.description {
+  color: #000000;
+  font-family: "SF Pro-Regular", Helvetica;
+  font-weight: 400;
+  white-space: pre-wrap;
+  padding: 12px;
+  padding-top: 24px;
+}
+
+.gif {
+  object-fit: cover;
+  height: 650px;
+  border-radius: 45px;
+  box-shadow: 5px 5px 10px gray;
+}
