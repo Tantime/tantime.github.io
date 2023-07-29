@@ -1,0 +1,28 @@
+.container-intro {
+  margin: 20px;
+  white-space: pre-wrap;
+  display: flex;
+}
+
+.intro-text {
+  font-size: 18px;
+  padding: 30px;
+  padding-left: 40px;
+}
+
+.image-cropper {
+  min-width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+.gif-about {
+  object-fit: cover;
+  border-radius: 35px;
+  display: block;
+  margin-bottom: 40px;
+  opacity: 90%;
+}
