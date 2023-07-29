@@ -56,14 +56,6 @@
   box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.2);
 }
 
-.image-cropper {
-  width: 500px;
-  height: 500px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 50%;
-}
-
 img {
   display: inline;
   margin: 0 auto;
