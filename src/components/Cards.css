@@ -23,6 +23,7 @@ h1 {
 
 .cards__items {
     margin-bottom: 24px;
+    white-space: pre-wrap;
 }
 
 .cards__item {
@@ -30,6 +31,7 @@ h1 {
     flex: 1;
     margin: 0 1rem;
     border-radius: 10px;
+    width: 350px;
 }
 
 .cards__item__link {
@@ -90,7 +92,7 @@ h1 {
 }
 
 .cards__item__info {
-    padding: 20px 30px 30px;
+    padding: 20px 30px 25px;
 }
 
 .cards__item__text {
@@ -105,7 +107,7 @@ h1 {
     }
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1280px) { /*prev 1280px*/
     .cards__items {
         display: flex;
     }

@@ -15,13 +15,18 @@ function App() {
             <Router>
                 <Navbar />
                 <Routes>
-                    <Route exact path='/' element={<Home />} />
+                    {/* <Route exact path='/' element={<Home />} />
                     <Route exact path='about/*' element={<About />} />
-                    <Route exact path='code/*' element={<Code />} />
+                    <Route exact path='code/*' element={<Code />} /> */}
                     {/* <Route exact path='art/*' element={<Art />} /> */}
-                    <Route exact path='/code/ios-clones' element={<IosDev />} />
-                    <Route exact path='/code/marathon' element={<Marathon />} />
+                    {/* <Route exact path='/code/ios-clones' element={<IosDev />} />
+                    <Route exact path='/code/marathon' element={<Marathon />} /> */}
                     {/* <Redirect to='/' /> */}
+                    <Route exact path='/' element={<Home />} />
+                    <Route exact path='/' element={<About />} />
+                    <Route exact path='/' element={<Code />} />
+                    <Route exact path='/' element={<IosDev />} />
+                    <Route exact path='/' element={<Marathon />} />
                 </Routes>
             </Router>
         </>

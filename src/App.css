@@ -1,69 +1,72 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+.title-container > h1 {
+  padding-top: 30px;
+  vertical-align: middle;
 }
 
 .home,
 .code,
 .art,
 .about {
-    display: flex;
-    height: 95vh;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
 }
 
 .code {
-    background-image: url('/public/images/img-home.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #fff;
-    font-size: 100px;
-    letter-spacing: 4px;
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-    margin: -350px;
+  height: 160px;
+  background-image: url('/public/images/img-home.jpg');
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 40px;
+  letter-spacing: 4px;
+  box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.2);
 }
 
 .art {
-    background-image: url('/public/images/art2.avif');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #fff;
-    font-size: 100px;
-    letter-spacing: 4px;
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-    margin: -350px;
+  background-image: url('/public/images/art2.avif');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+  letter-spacing: 4px;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
 }
 
 .about {
-    background-image: url('/public/images/img-5.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #fff;
-    font-size: 100px;
-    letter-spacing: 4px;
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-    margin: -350px;
+  height: 160px;
+  background-image: url('/public/images/img-5.jpg');
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 40px;
+  letter-spacing: 4px;
+  box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.2);
 }
 
 .image-cropper {
-    width: 500px;
-    height: 500px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 50%;
+  width: 500px;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
 }
 
 img {
-    display: inline;
-    margin: 0 auto;
-    height: 134%;
-    width: auto;
+  display: inline;
+  margin: 0 auto;
+  height: 134%;
+  width: auto;
 }

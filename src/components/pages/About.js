@@ -8,7 +8,9 @@ export default function About() {
   
   return (
       <>
-          <h1 className='about'>Hi, I'm Matthew!</h1>
+        <div className='about'>
+          <h1>ABOUT</h1>
+        </div>
           <div className='image-cropper'>
               <img src='/images/pfp3.jpg' alt='matthew pfp'/>
           </div>
