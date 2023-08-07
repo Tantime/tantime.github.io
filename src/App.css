@@ -47,7 +47,7 @@
 .about {
   height: 160px;
   background-image: url('/public/images/img-5.jpg');
-  background-position: center;
+  background-position: bottom;
   background-size: auto;
   background-repeat: no-repeat;
   color: #fff;
