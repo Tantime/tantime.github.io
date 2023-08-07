@@ -1,0 +1,121 @@
+.lab-links > a,
+.lab-links > a:visited {
+  color: #3498db;
+  text-decoration: none;
+  line-height: 2.4;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.lab-links > a:hover,
+.lab-links > a:focus,
+.lab-links > a:active {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+.lab-links-newtab > a,
+.lab-links-newtab > a:visited {
+  color: #3498db;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.lab-links-newtab > a:hover,
+.lab-links-newtab > a:focus,
+.lab-links-newtab > a:active {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+.p-cse {
+  font-size: 1rem;
+  margin-bottom: 1.3rem;
+  margin-top: 1.3rem;
+}
+
+.body-main {
+  color: #444;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  max-width: 48rem;
+  padding: .25rem;
+  padding-left: 40px;
+  padding-right: 40px;
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+.body {
+  color: #444;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  max-width: 66rem;
+  padding: .25rem;
+  padding-left: 40px;
+  padding-right: 40px;
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+.body > img {
+  width: 100%;
+}
+
+.body-main > h1 {
+  border-bottom: 1.5px solid #eaeaea;
+  margin-bottom: 1.15rem;
+  padding-bottom: .5rem;
+  margin: 1.414rem 0 .5rem;
+  font-weight: bold;
+}
+
+.body > h1 {
+  border-bottom: 1.5px solid #eaeaea;
+  margin-bottom: 1.15rem;
+  padding-bottom: .5rem;
+  margin: 1.414rem 0 .5rem;
+  font-weight: bold;
+}
+
+.body > h2 {
+  border-bottom: 1.5px solid #eaeaea;
+  margin-bottom: 1.15rem;
+  padding-bottom: .5rem;
+  margin: 1.414rem 0 .5rem;
+  font-weight: bold;
+}
+
+.body > h3 {
+  margin-bottom: 1.15rem;
+  padding-bottom: .5rem;
+  margin: 1.414rem 0 .5rem;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.return {
+  margin-top: 20px;
+  border-bottom: 1.5px solid #eaeaea;
+}
+
+.body > p > blockquote {
+  margin: 10px;
+  color: gray;
+  padding-left: 30px;
+}
+
+.body > p > blockquote > span {
+  padding-left: 20px;
+}
+
+.body > p > ul {
+  padding-left: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 1.75;
+}
+
+.original-width {
+  width: max-content;
+}

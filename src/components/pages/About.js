@@ -8,7 +8,8 @@ export default function About() {
   }, [])
   
   return (
-      <>
+    <>
+      <div className='container-about'>
         <div className='about'>
           <h1>ABOUT</h1>
         </div>
@@ -25,7 +26,11 @@ export default function About() {
             Contact: matthew.z.tan@gmail.com
           </p>
         </div>
-        <img className='gif-about' src='videos/ghibli4.gif' alt=''/>
-      </>
+        <div className='about-extra'>
+          <img className='gif-about' src='videos/ghibli4.gif' alt=''/>
+          <p id='about-gif-description'><small style={{ fontStyle:'italic' }}>The Secret World of Arriety by Hayao Miyazaki</small></p>
+        </div>
+      </div>
+    </>
   )
 }

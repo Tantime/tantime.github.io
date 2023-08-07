@@ -1,7 +1,15 @@
+.container-about {
+  justify-content: center;
+  align-items: center;
+}
+
 .container-intro {
-  margin: 20px;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
   white-space: pre-wrap;
   display: flex;
+  align-items: center;
 }
 
 .intro-text {
@@ -25,4 +33,28 @@
   display: block;
   margin-bottom: 40px;
   opacity: 90%;
+}
+
+.about-extra {
+  margin: 20px;
+}
+
+.about-extra > img {
+  width: 450px;
+}
+
+.about-extra > p {
+  text-align: center;
+}
+
+#about-gif-description {
+  margin-top: -30px;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  align-content: center;
+  align-self: center;
 }

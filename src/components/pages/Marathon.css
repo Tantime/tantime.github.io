@@ -1,6 +1,32 @@
+#marathon-container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: .25rem;
+  color: #444;
+}
+
 #marathon-container > h1 {
-  font-weight: 700;
+  font-weight: bold;
   white-space: pre-wrap;
+  border-bottom: 1.5px solid #eaeaea;
+  margin-bottom: 1.15rem;
+  padding-bottom: .5rem;
+  margin: 1.414rem 0 .5rem;
+  line-height: 1.42;
+}
+
+#marathon-container > h3 {
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  width: 50vw;
+  min-width: 400px;
+  margin: 20px;
+}
+
+#marathon-container > #figma-embed {
+  width: 75vw;
 }
 
 .img-container {
@@ -20,24 +46,4 @@
   width: 99%;
   height: 1000px;
   margin: 10px;
-}
-
-#marathon-container {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  margin: 20px;
-}
-
-#marathon-container > h3 {
-  white-space: pre-wrap;
-  overflow-wrap: break-word;
-  width: 50vw;
-  min-width: 400px;
-  margin: 20px;
-}
-
-#marathon-container > #figma-embed {
-  width: 75vw;
 }

@@ -33,9 +33,9 @@ function Cards() {
                     path='/code/hydrate' />
                     <CardItem 
                     src='images/cse15lab2.jpg'
-                    text='Software Tools and Techniques | CSE 15 Lab Reports'
+                    text='CSE 15L Lab Reports | Software Tools and Techniques'
                     label='Documentation'
-                    path='/code/cse15-lab-reports' />
+                    path='/code/cse15labs' />
                 </ul>
             </div>
         </div>
