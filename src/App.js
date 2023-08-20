@@ -14,6 +14,8 @@ import Cse15Lab2 from './components/pages/Cse15Lab2';
 import Cse15Lab3 from './components/pages/Cse15Lab3';
 import Cse15Lab4 from './components/pages/Cse15Lab4';
 import Cse15Lab5 from './components/pages/Cse15Lab5';
+import Hydrate from './components/pages/Hydrate';
+import SikFan from './components/pages/SikFan'
 
 function App() {
     return (
@@ -33,6 +35,8 @@ function App() {
                     <Route exact path='/code/cse15labs/lab3' element={<Cse15Lab3 />} />
                     <Route exact path='/code/cse15labs/lab4' element={<Cse15Lab4 />} />
                     <Route exact path='/code/cse15labs/lab5' element={<Cse15Lab5 />} />
+                    <Route exact path='/code/hydrate' element={<Hydrate />} />
+                    <Route exact path='/code/sikfan' element={<SikFan />} />
                     {/* <Redirect to='/' /> */}
                 </Routes>
             </Router>
