@@ -25,7 +25,7 @@ function Cards() {
                     src='images/sikfan3.jpg'
                     text='SikFan | Recipe Android App'
                     label='Android Dev'
-                    path='/code/recipes-app' />
+                    path='/code/sikfan' />
                     <CardItem 
                     src='images/hydrate1.png'
                     text='HYDRATE | Hydration Reminder Device'
