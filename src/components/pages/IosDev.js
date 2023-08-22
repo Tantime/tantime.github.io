@@ -15,7 +15,7 @@ export default function IosDev() {
           Here are a few examples of iOS apps I've made!
           <br/>
           <div id='description-main-technologies'>
-            Technologies & Languages: Xcode Storyboards, Swift, CocoaPods, Alamofire
+            Technologies & Languages: Swift, Xcode Storyboards, CocoaPods, Alamofire
           </div>
         </p>
         <div className='container-project'>
