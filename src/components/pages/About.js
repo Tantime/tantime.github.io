@@ -21,7 +21,7 @@ export default function About() {
             Hi, I'm Matthew! I'm currently a junior studying Computer Engineering at 
             UC San Diego who loves cooking and playing volleyball. I'm particularly
             interested in working in software engineering or embedded systems.
-            I'm always eager to learn and am always open to connecting!
+            I'm always eager to learn and open to connecting!
             <br/><br/>
             Contact: matthew.z.tan@gmail.com
           </p>
@@ -29,6 +29,13 @@ export default function About() {
         <div className='about-extra'>
           <img className='gif-about' src='videos/ghibli4.gif' alt=''/>
           <p id='about-gif-description'><small style={{ fontStyle:'italic' }}>The Secret World of Arriety by Hayao Miyazaki</small></p>
+        </div>
+        <br/><br/>
+        <div className='link-about'>
+          <div className='lab-links-newtab'>
+            <a className='link-about' rel='noreferrer' target='_blank' href='https://github.com/tantime'>GitHub</a>
+            <a className='link-about' rel='noreferrer' target='_blank' href='https://www.instagram.com/tantime.jpg/'>Instagram</a>
+          </div>
         </div>
       </div>
     </>
