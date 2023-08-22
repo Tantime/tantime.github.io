@@ -12,7 +12,7 @@ export default function Hydrate() {
       <div className="container-main">
         <h1 className="title">HYDRATE - Hydration Reminder Device</h1>
         <p className="description-main">
-          Here is a hydration device I made ! The LEDs tell you how many sips of
+          Here is a hydration reminder device I made! The LEDs tell you how many sips of
           water you have taken. If you have not taken 4 sips by the end of a set time interval,
           the device will whack you.
           <br/>
@@ -24,14 +24,14 @@ export default function Hydrate() {
       <div className='container-project'>
         <div className='container-hydrate'>
           <h3 className='header'>Hydrated</h3>
-          <video className='video-hydrate' src='/videos/whack not activated.mov' controls></video>
+          <video className='video-hydrate' src='/videos/whack not activated.mp4' playsInline controls></video>
           <p className='description'>
             The device counts the number of sips the user has taken using LEDs.
           </p>
         </div>
         <div className='container-hydrate'>
           <h3 className='header'>NOT Hydrated</h3>
-          <video className='video-hydrate' src='/videos/whack activated.mov' controls></video>
+          <video className='video-hydrate' src='/videos/whack activated.mp4' playsInline controls></video>
           <p className='description'>
             If the user does not take at least 4 sips in the set time interval, it whacks 
             the user to remind them to stay hydrated.
