@@ -15,7 +15,7 @@ export default function About() {
         </div>
         <div className='container-intro'>
           <div className='image-cropper'>
-              <img src='/images/pfp3.jpg' alt='matthew pfp'/>
+              <img id='portrait' src='/images/pfp resized.jpg' alt='matthew pfp'/>
           </div>
           <p className='intro-text'>
             Hi, I'm Matthew! I'm currently a junior studying Computer Engineering at 
