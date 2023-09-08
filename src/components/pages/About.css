@@ -63,3 +63,13 @@
   margin-left: -5px;
   height: 110%;
 }
+
+a:has(.about-link-animation) {
+  --fa-animation-duration: 0s;
+}
+
+a:has(.about-link-animation):hover,
+a:has(.about-link-animation):focus,
+a:has(.about-link-animation):active {
+  --fa-animation-duration: 2s;
+}
