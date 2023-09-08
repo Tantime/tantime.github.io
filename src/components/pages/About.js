@@ -34,7 +34,8 @@ export default function About() {
         <div className='link-about'>
           <div className='lab-links-newtab'>
             <a className='link-about' rel='noreferrer' target='_blank' href='https://github.com/tantime'>GitHub</a>
-            <a className='link-about' rel='noreferrer' target='_blank' href='https://www.instagram.com/tantime.jpg/'>Instagram</a>
+            {/* <a className='link-about' rel='noreferrer' target='_blank' href='https://www.instagram.com/tantime.jpg/'>Instagram</a> */}
+            <a className='link-about' rel='noreferrer' target='_blank' href='https://www.linkedin.com/in/matthewztan'>LinkedIn</a>
           </div>
         </div>
       </div>
