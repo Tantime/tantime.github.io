@@ -58,3 +58,8 @@
   align-content: center;
   align-self: center;
 }
+
+#portrait {
+  margin-left: -5px;
+  height: 110%;
+}
