@@ -31,12 +31,14 @@ export default function About() {
         
         <div className='link-about'>
           <div className='lab-links-newtab'>
+            <a className='link-about' rel='noreferrer' target='_blank' href='https://www.linkedin.com/in/matthewztan'>
+              <i class="fa-brands fa-linkedin-in fa-flip about-link-animation"></i> LinkedIn
+            </a>
             <a className='link-about' rel='noreferrer' target='_blank' href='https://github.com/tantime'>
               <i class="fa-brands fa-github fa-flip about-link-animation"></i> GitHub
             </a>
-            {/* <a className='link-about' rel='noreferrer' target='_blank' href='https://www.instagram.com/tantime.jpg/'>Instagram</a> */}
-            <a className='link-about' rel='noreferrer' target='_blank' href='https://www.linkedin.com/in/matthewztan'>
-              <i class="fa-brands fa-linkedin-in fa-flip about-link-animation"></i> LinkedIn
+            <a className='link-about' rel='noreferrer' target='_blank' href='https://www.instagram.com/tantime.jpg/'>
+              <i class="fa-brands fa-instagram fa-flip about-link-animation"></i> Instagram
             </a>
           </div>
         </div>
