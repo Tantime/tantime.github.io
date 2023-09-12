@@ -1,7 +1,7 @@
 video {
     object-fit: cover;
     width: 100%;
-    height: 101%;
+    height: 100%;
     position: fixed;
     z-index: -1;
 }
@@ -48,7 +48,7 @@ video {
 @media screen and (max-width: 960px) {
     .hero-container > h1 {
         font-size: 70px;
-        margin-top: -150px;
+        margin-top: -250px;
     }
 
     .hero-container > p {
@@ -60,7 +60,7 @@ video {
 @media screen and (max-width: 768px) {
     .hero-container > h1 {
         font-size: 50px;
-        margin-top: -150px;
+        margin-top: -250px;
     }
 
     .hero-container > p {

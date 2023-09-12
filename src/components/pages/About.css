@@ -27,10 +27,33 @@
   margin-left: 20px;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1080px) {
   .image-cropper {
     min-width: 150px;
     height: 150px;
+  }
+
+  .container-intro {
+    max-width: 760px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .image-cropper {
+    width: 150px;
+    height: 150px;
+  }
+
+  .container-intro {
+    max-width: 485px;
+    flex-direction: column;
+  }
+
+  .image-cropper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-left: 20px;
   }
 }
 
