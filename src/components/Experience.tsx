@@ -165,7 +165,7 @@ const Experience: React.FC = () => {
         'Assured quality of AI-powered, multi-sensory IoT devices through black, white, and gray box testing',
         'Increased test coverage by 38% and automated 50+ test cases by implementing unit, component, and E2E testing for screening, assessment, and training applications'
       ],
-      technologies: ['Vue', 'Cypress', 'JavaScript']
+      technologies: ['Cypress', 'Vue', 'JavaScript']
     }
   ];
 

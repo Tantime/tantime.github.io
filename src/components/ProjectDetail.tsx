@@ -72,10 +72,6 @@ const Paragraph = styled.p`
 const ProjectDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-  
   const projects = [
     {
       id: 1,

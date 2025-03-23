@@ -47,27 +47,21 @@ const SkillIcon = styled.i`
 const Skills: React.FC = () => {
   // Populate with skills from your resume
   const skills: Skill[] = [
+    { name: 'Git' },
     { name: 'Linux' },
-    { name: 'Postgres' },
-    { name: 'ASP.NET Core' },
     { name: 'C#' },
-    { name: 'C' },
-    { name: 'C++' },
-    { name: 'Java' },
-    { name: 'TCP/IP' },
-    { name: 'JavaScript' },
     { name: 'TypeScript' },
+    { name: 'Java' },
+    { name: 'Python' },
+    { name: 'C++' },
+    { name: 'Postgres' },
     { name: 'React' },
-    { name: 'Node.js' },
+    { name: 'JavaScript' },
     { name: 'HTML' },
     { name: 'CSS' },
-    { name: 'Python' },
     { name: 'MongoDB' },
-    { name: 'PostgreSQL' },
-    { name: 'Git' },
     { name: 'Docker' },
     { name: 'AWS' },
-    { name: 'REST APIs' },
   ];
 
   return (

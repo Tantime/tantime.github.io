@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
             </SocialLink>
           ))}
         </SocialLinks>
-        <Copyright>© {new Date().getFullYear()} YourName.dev · All rights reserved</Copyright>
+        <Copyright>© {new Date().getFullYear()} Matthew Tan · All rights reserved</Copyright>
       </div>
     </FooterContainer>
   );
