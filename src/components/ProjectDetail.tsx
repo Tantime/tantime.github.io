@@ -103,7 +103,7 @@ To ensure precise movement control, I fine-tuned PID controllers for both GPS-ba
         },
         {
           type: 'video' as const,
-          url: '/assets/projects/autonomous0car/slam.mov',
+          url: '/assets/projects/autonomous-car/slam.mov',
           caption: 'SLAM output',
         },
         {
