@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import GlobalStyles from './styles/GlobalStyles';
 import { lightTheme, darkTheme } from './styles/theme';
 import Header from './components/Header';

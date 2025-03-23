@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { getTechIcon } from '../utils/techIcons';
+import ProjectMedia from './ProjectMedia';
 
 const ProjectDetailSection = styled.section`
   padding: 60px 0;
@@ -83,7 +84,34 @@ const ProjectDetail: React.FC = () => {
 
 The hardware implementation utilizes an NVIDIA Jetson platform integrated with LiDAR sensors and camera modules, enabling robust real-time navigation and obstacle avoidance. For object detection, I implemented OpenCV and YOLOv5 to process RGB frames and accurately identify the target's location within the mapped environment.
 
-To ensure precise movement control, I fine-tuned PID controllers for both GPS-based pathing and autonomous steering, which significantly enhanced the vehicle's navigation accuracy and throttle control.`
+To ensure precise movement control, I fine-tuned PID controllers for both GPS-based pathing and autonomous steering, which significantly enhanced the vehicle's navigation accuracy and throttle control.`,
+      media: [
+        {
+          type: 'image' as const,
+          url: '/assets/projects/autonomous-car/mapsai.jpg',
+          caption: 'MapsAI group picture'
+        },
+        {
+          type: 'image' as const,
+          url: '/assets/projects/autonomous-car/robocar.jpeg',
+          caption: 'Robot car'
+        },
+        {
+          type: 'video' as const,
+          url: '/assets/projects/autonomous-car/vslam.mov',
+          caption: 'Spectacular AI VSLAM output',
+        },
+        {
+          type: 'video' as const,
+          url: '/assets/projects/autonomous0car/slam.mov',
+          caption: 'SLAM output',
+        },
+        {
+          type: 'video' as const,
+          url: '/assets/projects/autonomous-car/object-detection.mov',
+          caption: 'YOLOv5 object detection',
+        },
+      ]
     },
     {
       id: 2,
@@ -160,6 +188,7 @@ This architecture effectively manages the communication between the user interfa
           {paragraphs.map((paragraph, index) => (
             <Paragraph key={index}>{paragraph}</Paragraph>
           ))}
+          {project.media && <ProjectMedia media={project.media} />}
         </ProjectContent>
       </div>
     </ProjectDetailSection>

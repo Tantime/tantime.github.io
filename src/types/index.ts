@@ -1,3 +1,5 @@
+import { MediaItem } from '../components/ProjectMedia';
+
 export type ThemeType = 'light' | 'dark';
 
 export interface Project {
@@ -10,6 +12,7 @@ export interface Project {
   sourceUrl?: string;
   period?: string;
   details?: string[];
+  media?: MediaItem[];
 }
 
 export interface Skill {
