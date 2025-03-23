@@ -1,57 +1,35 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-// Media item type definition
 export type MediaItem = {
   type: 'image' | 'video';
   url: string;
   caption?: string;
-  thumbnail?: string; // For videos
+  thumbnail?: string;
 };
 
-// Container for all media items
 const MediaGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 16px;
-  margin: 24px 0;
+  gap: 24px;
+  margin: 32px 0;
 `;
 
-// Performance optimized container
+// Apple-inspired container
 const MediaContainer = styled.div`
-  border-radius: 4px;
+  border-radius: 12px;
   overflow: hidden;
   position: relative;
   aspect-ratio: 16/9;
   background: ${props => props.theme.cardBackground};
   cursor: pointer;
-  will-change: transform; // Optimize for GPU acceleration
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-  transition: box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), 
+              box-shadow 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
   
   &:hover {
-    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
-  }
-  
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-      to bottom,
-      transparent 75%,
-      rgba(0, 0, 0, 0.2) 100%
-    );
-    opacity: 0;
-    transition: opacity 0.2s ease;
-    pointer-events: none;
-  }
-  
-  &:hover::after {
-    opacity: 1;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
   }
   
   img, video {
@@ -62,42 +40,52 @@ const MediaContainer = styled.div`
   }
 `;
 
-// More subtle caption that only appears on hover
+// Apple-style caption with frosted glass effect
 const Caption = styled.div`
   position: absolute;
-  bottom: 8px;
+  bottom: 12px;
   left: 12px;
   right: 12px;
-  padding: 4px 8px;
-  font-size: 0.8rem;
-  color: white;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.85);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
   opacity: 0;
-  transition: opacity 0.2s ease;
-  border-radius: 3px;
-  background: rgba(0, 0, 0, 0.65);
-  z-index: 2;
-  pointer-events: none;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  transform: translateY(8px);
+  transition: opacity 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
+              transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
   
   ${MediaContainer}:hover & {
     opacity: 1;
+    transform: translateY(0);
+  }
+  
+  // Dark mode support
+  @media (prefers-color-scheme: dark) {
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(40, 40, 40, 0.7);
   }
 `;
 
-// Play indicator for videos
+// Elegant play button for videos
 const PlayIcon = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 40px;
-  height: 40px;
-  background: rgba(0, 0, 0, 0.65);
-  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
+  opacity: 0.9;
+  transition: opacity 0.3s ease, transform 0.3s ease;
   
   &::after {
     content: '';
@@ -105,13 +93,18 @@ const PlayIcon = styled.div`
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 8px 0 8px 12px;
+    border-width: 10px 0 10px 18px;
     border-color: transparent transparent transparent white;
-    margin-left: 3px;
+    margin-left: 4px;
+  }
+  
+  ${MediaContainer}:hover & {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.05);
   }
 `;
 
-// Modal for larger view
+// Apple-style modal
 const ModalOverlay = styled.div`
   position: fixed;
   top: 0;
@@ -119,41 +112,60 @@ const ModalOverlay = styled.div`
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(16px);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
-  padding: 20px;
+  padding: 24px;
+  animation: fadeIn 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
 `;
 
 const ModalContent = styled.div`
   max-width: 90%;
   max-height: 90%;
   position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  animation: scaleIn 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  
+  @keyframes scaleIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
   
   img, video {
     max-width: 100%;
     max-height: 90vh;
     display: block;
-    border-radius: 4px;
-    object-fit: contain; /* Keep as contain in modal view to show full media */
+    border-radius: 12px;
+    object-fit: contain;
   }
 `;
 
+// Apple-style close button
 const CloseButton = styled.button`
   position: absolute;
-  top: -40px;
+  top: -50px;
   right: 0;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.1);
   border: none;
   color: white;
-  font-size: 1.5rem;
+  font-size: 14px;
+  font-weight: 500;
   cursor: pointer;
-  padding: 8px;
-  opacity: 0.8;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background 0.2s ease;
   
   &:hover {
-    opacity: 1;
+    background: rgba(255, 255, 255, 0.2);
   }
 `;
 
