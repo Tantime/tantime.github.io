@@ -34,9 +34,9 @@ const Copyright = styled.p`
 const Footer: React.FC = () => {
   // Using the exact same icons as in the intro section
   const socialLinks: SocialLinkType[] = [
-    { name: 'GitHub', url: 'https://github.com/yourusername', icon: 'fab fa-github' },
-    { name: 'LinkedIn', url: 'https://linkedin.com/in/yourusername', icon: 'fab fa-linkedin' },
-    { name: 'Email', url: 'mailto:your.email@example.com', icon: 'fas fa-envelope' }
+    { name: 'GitHub', url: 'https://github.com/Tantime', icon: 'fab fa-github' },
+    { name: 'LinkedIn', url: 'https://linkedin.com/in/matthewztan', icon: 'fab fa-linkedin' },
+    { name: 'Email', url: 'mailto:matthew.z.tan@gmail.com', icon: 'fas fa-envelope' }
   ];
 
   return (

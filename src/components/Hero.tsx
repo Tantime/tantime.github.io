@@ -69,17 +69,17 @@ const Hero: React.FC = () => {
         
         <LocationContainer>
           <LocationIcon className="fas fa-map-marker-alt" />
-          San Francisco Bay Area
+          San Diego, California
         </LocationContainer>
         
         <SocialContainer>
-          <SocialLink href="https://github.com/matthewtan" target="_blank" rel="noopener noreferrer">
+          <SocialLink href="https://github.com/Tantime" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-github"></i>
           </SocialLink>
-          <SocialLink href="https://linkedin.com/in/matthewtan" target="_blank" rel="noopener noreferrer">
+          <SocialLink href="https://linkedin.com/in/matthewztan" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-linkedin"></i>
           </SocialLink>
-          <SocialLink href="mailto:your.email@example.com">
+          <SocialLink href="mailto:matthew.z.tan@gmail.com">
             <i className="fas fa-envelope"></i>
           </SocialLink>
         </SocialContainer>

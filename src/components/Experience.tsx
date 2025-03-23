@@ -149,7 +149,7 @@ const Experience: React.FC = () => {
     {
       company: 'Harvard Innovation Labs',
       position: 'Software Engineer Intern',
-      duration: 'June 2022 - Sep. 2022',
+      duration: 'June 2023 - Sep. 2023',
       description: [
         'Created site-wide search feature with filters and sorting, improving retention rate by 32%',
         'Constructed robust content tagging system, allowing for quick article lookup by category',

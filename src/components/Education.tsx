@@ -6,6 +6,7 @@ interface EducationItem {
   degree: string;
   field: string;
   duration: string;
+  logo?: string;
 }
 
 const EducationSection = styled.section`
@@ -25,18 +26,24 @@ const EducationList = styled.div`
 
 const EducationCard = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
   border-left: 1px solid ${props => props.theme.accent}40;
   padding-left: 12px;
-  
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
 `;
 
 const EducationInfo = styled.div`
   flex: 1;
+`;
+
+const EducationHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const SchoolName = styled.h3`
@@ -68,7 +75,7 @@ const Education: React.FC = () => {
       degree: 'Bachelor of Science',
       field: 'Computer Engineering',
       duration: '2021 - 2025'
-    }
+    },
   ];
 
   return (
@@ -79,10 +86,14 @@ const Education: React.FC = () => {
           {educationItems.map((item, index) => (
             <EducationCard key={index}>
               <EducationInfo>
-                <SchoolName>{item.school}</SchoolName>
-                <DegreeInfo>{item.degree} in {item.field}</DegreeInfo>
+                <EducationHeader>
+                  <div>
+                    <SchoolName>{item.school}</SchoolName>
+                    <DegreeInfo>{item.degree} in {item.field}</DegreeInfo>
+                  </div>
+                  <DurationInfo>{item.duration}</DurationInfo>
+                </EducationHeader>
               </EducationInfo>
-              <DurationInfo>{item.duration}</DurationInfo>
             </EducationCard>
           ))}
         </EducationList>
