@@ -25,6 +25,13 @@ export const getTechIcon = (tech: string): string => {
     'OpenCV': 'devicon-opencv-plain',
     'Scikit-Learn SVC': 'devicon-scikitlearn-plain',
     'Cypress': 'devicon-cypressio-plain',
+    'Swift': 'devicon-swift-plain',
+    'iOS SDK': 'devicon-apple-original',
+    'Xcode': 'devicon-xcode-plain',
+    'Firebase': 'devicon-firebase-plain',
+    'Core Data': 'devicon-apple-original',
+    'Alamofire': 'devicon-swift-plain',
+    'Back4App': 'devicon-nodejs-plain',
   };
   
   // Map for Font Awesome icons (as fallback)
@@ -55,6 +62,7 @@ export const getTechIcon = (tech: string): string => {
     'XGBoost': 'fas fa-bolt',
     'Spectacular AI SDK': 'fas fa-location-crosshairs',
     'Surprise SVD': 'fas fa-exclamation',
+    'UIKit': 'fa-brands fa-uikit',
   };
   
   // First check if we have a devicon for this technology

@@ -1,19 +1,6 @@
-import { MediaItem } from '../components/ProjectMedia';
+export type { Project } from '../data/projects';
 
 export type ThemeType = 'light' | 'dark';
-
-export interface Project {
-  id: number;
-  slug: string;
-  title: string;
-  description: string;
-  technologies: string[];
-  demoUrl?: string;
-  sourceUrl?: string;
-  period?: string;
-  details?: string[];
-  media?: MediaItem[];
-}
 
 export interface Skill {
   name: string;

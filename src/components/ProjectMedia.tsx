@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 
 export type MediaItem = {
-  type: 'image' | 'video';
+  type: 'image' | 'video' | 'gif';
   url: string;
   caption?: string;
   thumbnail?: string;
@@ -170,22 +170,58 @@ const CloseButton = styled.button`
 `;
 
 // Individual media component
-const MediaItem: React.FC<{ item: MediaItem }> = ({ item }) => {
+const MediaItemComponent: React.FC<{ item: MediaItem }> = ({ item }) => {
   const [modalOpen, setModalOpen] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  
+  const handleOpenModal = () => {
+    setModalOpen(true);
+    
+    if (item.type === 'video') {
+      setTimeout(() => {
+        if (videoRef.current) {
+          videoRef.current.play().catch(err => {
+            console.log('Auto-play prevented:', err);
+          });
+        }
+      }, 100);
+    }
+  };
+  
+  const handleCloseModal = () => {
+    if (item.type === 'video' && videoRef.current) {
+      videoRef.current.pause();
+    }
+    setModalOpen(false);
+  };
   
   const renderMedia = (fullSize = false) => {
     if (item.type === 'image') {
-      return <img src={item.url} alt={item.caption || 'Project image'} loading="lazy" />;
+      return <img 
+        src={item.url} 
+        alt={item.caption || 'Project image'} 
+        loading="lazy" 
+      />;
+    } else if (item.type === 'gif') {
+      // Handle GIFs as images but with specific styling
+      return <img 
+        src={item.url} 
+        alt={item.caption || 'Project GIF'} 
+        loading="lazy"
+        style={{ objectFit: 'cover' }} 
+      />;
     } else {
       return (
         <video 
+          ref={fullSize ? videoRef : undefined}
           src={item.url} 
           controls={fullSize}
           poster={item.thumbnail}
           preload="metadata"
-          loop={!fullSize}
+          loop={false}
           muted={!fullSize}
           playsInline
+          autoPlay={fullSize}
         />
       );
     }
@@ -193,17 +229,17 @@ const MediaItem: React.FC<{ item: MediaItem }> = ({ item }) => {
   
   return (
     <>
-      <MediaContainer onClick={() => setModalOpen(true)}>
+      <MediaContainer onClick={handleOpenModal}>
         {renderMedia(false)}
         {item.type === 'video' && <PlayIcon />}
         {item.caption && <Caption>{item.caption}</Caption>}
       </MediaContainer>
       
       {modalOpen && (
-        <ModalOverlay onClick={() => setModalOpen(false)}>
+        <ModalOverlay onClick={handleCloseModal}>
           <ModalContent onClick={e => e.stopPropagation()}>
             {renderMedia(true)}
-            <CloseButton onClick={() => setModalOpen(false)}>×</CloseButton>
+            <CloseButton onClick={handleCloseModal}>Close</CloseButton>
           </ModalContent>
         </ModalOverlay>
       )}
@@ -218,11 +254,10 @@ const ProjectMedia: React.FC<{ media: MediaItem[] }> = ({ media }) => {
   return (
     <MediaGrid>
       {media.map((item, index) => (
-        <MediaItem key={index} item={item} />
+        <MediaItemComponent key={index} item={item} />
       ))}
     </MediaGrid>
   );
 };
 
 export default ProjectMedia;
-export { MediaItem };

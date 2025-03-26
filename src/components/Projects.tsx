@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { getTechIcon } from '../utils/techIcons';
-import { Project } from '../types';
+import projects from '../data/projects';
 
 const ProjectsSection = styled.section`
   padding: 25px 0;
@@ -85,41 +85,6 @@ const TechIcon = styled.i`
 `;
 
 const Projects: React.FC = () => {
-  const projects: Project[] = [
-    {
-      id: 1,
-      slug: 'autonomous-robotic-car',
-      title: 'Autonomous Robotic Car',
-      description: 'Search-and-rescue robotic application with vSLAM and real-time object detection to navigate and locate targets',
-      technologies: ['Python', 'ROS 2', 'OpenCV', 'Spectacular AI SDK'],
-      period: 'Jan 2025 - Mar 2025'
-    },
-    {
-      id: 2,
-      slug: 'steam-game-recommender',
-      title: 'Steam Game Recommender System',
-      description: 'Personalized game recommendation system using collaborative filtering to predict user ratings from sparse data',
-      technologies: ['Python', 'Surprise SVD'],
-      period: 'Sep 2024 - Dec 2024'
-    },
-    {
-      id: 3,
-      slug: 'diabetes-detector',
-      title: 'Diabetes Detector',
-      description: 'Machine learning models to predict patient diabetes with minimized false negatives for reliable diagnostics',
-      technologies: ['Python', 'Scikit-Learn SVC', 'XGBoost'],
-      period: 'Sep 2024 - Dec 2024'
-    },
-    {
-      id: 4,
-      slug: 'pantrypal',
-      title: 'PantryPal (GenAI Recipe App)',
-      description: 'AI recipe app generating recipes from voice input with DALL-E image previews in under 10 seconds',
-      technologies: ['Java', 'MongoDB', 'HTTP', 'REST API'],
-      period: 'Sep 2023 - Dec 2023'
-    }
-  ];
-
   return (
     <ProjectsSection id="projects">
       <div className="container">
