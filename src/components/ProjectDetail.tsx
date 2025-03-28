@@ -172,11 +172,6 @@ const ProjectDetail: React.FC = () => {
                 <Paragraph key={pIndex}>{paragraph}</Paragraph>
               ))}
               
-              {/* Section media */}
-              {section.media && section.media.length > 0 && 
-                <ProjectMedia media={section.media} />
-              }
-              
               {section.subheaders && section.subheaders.map((subheader, shIndex) => (
                 <div key={shIndex}>
                   <SubheaderTitle>{subheader.title}</SubheaderTitle>
@@ -191,6 +186,11 @@ const ProjectDetail: React.FC = () => {
                   }
                 </div>
               ))}
+
+              {/* Section media */}
+              {section.media && section.media.length > 0 && 
+                <ProjectMedia media={section.media} />
+              }
             </ProjectSection>
           ))}
         </ProjectContent>

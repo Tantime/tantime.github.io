@@ -12,19 +12,6 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  /* Hide scrollbar but keep functionality */
-  html {
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-  }
-  
-  html::-webkit-scrollbar {
-    display: none; /* Chrome, Safari */
-  }
-
   body {
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
     background-color: ${props => props.theme.background};

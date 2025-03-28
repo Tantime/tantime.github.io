@@ -42,22 +42,7 @@ const projects: Project[] = [
         type: 'image' as const,
         url: '/assets/projects/autonomous-car/robocar.jpeg',
         caption: 'Robot car'
-      },
-      {
-        type: 'video' as const,
-        url: '/assets/projects/autonomous-car/vslam.mov',
-        caption: 'Spectacular AI VSLAM output',
-      },
-      {
-        type: 'video' as const,
-        url: '/assets/projects/autonomous-car/slam.mov',
-        caption: 'SLAM output',
-      },
-      {
-        type: 'video' as const,
-        url: '/assets/projects/autonomous-car/object-detection.mov',
-        caption: 'YOLOv5 object detection',
-      },
+      }
     ]
   },
   {
@@ -76,7 +61,18 @@ const projects: Project[] = [
     description: 'Machine learning models to predict patient diabetes with minimized false negatives for reliable diagnostics',
     period: 'Sep 2024 - Dec 2024',
     technologies: ['Python', 'Scikit-Learn SVC', 'XGBoost'],
-    media: []
+    media: [
+      {
+        type: 'image' as const,
+        url: '/assets/projects/diabetes-detector/correlation-matrix.png',
+        caption: 'Feature correlation matrix'
+      },
+      {
+        type: 'image' as const,
+        url: '/assets/projects/diabetes-detector/pairplots.png',
+        caption: 'Feature importance analysis'
+      }
+    ]
   },
   {
     id: 4,
@@ -165,7 +161,44 @@ export const projectDetails: Record<string, ProjectDetails> = {
 
 The hardware implementation utilizes an NVIDIA Jetson platform integrated with LiDAR sensors and camera modules, enabling robust real-time navigation and obstacle avoidance. For object detection, I implemented OpenCV and YOLOv5 to process RGB frames and accurately identify the target's location within the mapped environment.
 
-To ensure precise movement control, I fine-tuned PID controllers for both GPS-based pathing and autonomous steering, which significantly enhanced the vehicle's navigation accuracy and throttle control.`
+To ensure precise movement control, I fine-tuned PID controllers for both GPS-based pathing and autonomous steering, which significantly enhanced the vehicle's navigation accuracy and throttle control.`,
+        media: [
+          {
+            type: 'video' as const,
+            url: '/assets/projects/autonomous-car/gps-laps.mov',
+            caption: 'Autonomous laps w/ GPS',
+          },
+          {
+            type: 'video' as const,
+            url: '/assets/projects/autonomous-car/opencv-laps.mov',
+            caption: 'Autonomous laps w/ OpenCV',
+          },
+          {
+            type: 'video' as const,
+            url: '/assets/projects/autonomous-car/remote-autonomous-laps.mov',
+            caption: 'Remote autonomous laps w/ deep learning',
+          },
+          {
+            type: 'video' as const,
+            url: '/assets/projects/autonomous-car/local-autonomous-laps.mov',
+            caption: 'Local autonomous laps w/ deep learning',
+          },
+          {
+            type: 'video' as const,
+            url: '/assets/projects/autonomous-car/vslam.mov',
+            caption: 'Spectacular AI VSLAM output',
+          },
+          {
+            type: 'video' as const,
+            url: '/assets/projects/autonomous-car/slam.mov',
+            caption: 'SLAM output',
+          },
+          {
+            type: 'video' as const,
+            url: '/assets/projects/autonomous-car/object-detection.mov',
+            caption: 'YOLOv5 object detection',
+          }
+        ]
       }
     ]
   },
@@ -211,16 +244,6 @@ The scale of this problem is also important to recognize. The Centers for Diseas
 
 diabetes_binary_5050split_health_indicators_BRFSS2015.csv is a clean dataset of 70,692 survey responses to the CDC's BRFSS 2015. It has an equal 50-50 split of respondents with no diabetes and with either prediabetes or diabetes. The target variable Diabetes_binary has 2 classes: 0 is for no diabetes, 1 is for prediabetes or diabetes. This dataset has 21 feature variables and is balanced.`,
             media: [
-              {
-                type: 'image' as const,
-                url: '/assets/projects/diabetes-detector/correlation-matrix.png',
-                caption: 'Feature correlation matrix'
-              },
-              {
-                type: 'image' as const,
-                url: '/assets/projects/diabetes-detector/pairplots.png',
-                caption: 'Feature importance analysis'
-              },
               {
                 type: 'image' as const,
                 url: '/assets/projects/diabetes-detector/boxplot.png',

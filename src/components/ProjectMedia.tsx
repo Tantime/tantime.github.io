@@ -104,14 +104,13 @@ const PlayIcon = styled.div`
   }
 `;
 
-// Apple-style modal
 const ModalOverlay = styled.div`
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.9);
   backdrop-filter: blur(16px);
   display: flex;
   align-items: center;
@@ -126,12 +125,13 @@ const ModalOverlay = styled.div`
   }
 `;
 
+// Update ModalContent to ensure controls are visible
 const ModalContent = styled.div`
   max-width: 90%;
-  max-height: 90%;
+  max-height: 85vh; // Reduced from 90vh to leave room for controls
   position: relative;
   border-radius: 12px;
-  overflow: hidden;
+  overflow: visible; // Changed from hidden to visible
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   animation: scaleIn 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
   
@@ -140,13 +140,34 @@ const ModalContent = styled.div`
     to { transform: scale(1); opacity: 1; }
   }
   
-  img, video {
+  img {
     max-width: 100%;
-    max-height: 90vh;
+    max-height: 85vh;
     display: block;
     border-radius: 12px;
     object-fit: contain;
   }
+  
+  // Separate styling for video to ensure controls are visible
+  video {
+    max-width: 100%;
+    max-height: calc(85vh - 36px); // Extra space for controls
+    display: block;
+    border-radius: 12px 12px 0 0; // Rounded only at top
+    object-fit: contain;
+    background: #000; // Black background for videos
+    margin-bottom: 36px; // Explicit space for controls
+  }
+`;
+
+// Video container specifically for the modal
+const VideoContainer = styled.div`
+  position: relative;
+  width: 100%;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  padding-bottom: 36px; // Explicit padding for controls
 `;
 
 // Apple-style close button
@@ -203,7 +224,6 @@ const MediaItemComponent: React.FC<{ item: MediaItem }> = ({ item }) => {
         loading="lazy" 
       />;
     } else if (item.type === 'gif') {
-      // Handle GIFs as images but with specific styling
       return <img 
         src={item.url} 
         alt={item.caption || 'Project GIF'} 
@@ -211,19 +231,37 @@ const MediaItemComponent: React.FC<{ item: MediaItem }> = ({ item }) => {
         style={{ objectFit: 'cover' }} 
       />;
     } else {
-      return (
-        <video 
-          ref={fullSize ? videoRef : undefined}
-          src={item.url} 
-          controls={fullSize}
-          poster={item.thumbnail}
-          preload="metadata"
-          loop={false}
-          muted={!fullSize}
-          playsInline
-          autoPlay={fullSize}
-        />
-      );
+      // For videos in the modal view, wrap in a container
+      if (fullSize) {
+        return (
+          <VideoContainer>
+            <video 
+              ref={videoRef}
+              src={item.url} 
+              controls
+              poster={item.thumbnail}
+              preload="metadata"
+              loop={false}
+              muted={false}
+              playsInline
+              autoPlay
+            />
+          </VideoContainer>
+        );
+      } else {
+        // Thumbnail view remains the same
+        return (
+          <video 
+            src={item.url} 
+            controls={false}
+            poster={item.thumbnail}
+            preload="metadata"
+            loop={false}
+            muted={true}
+            playsInline
+          />
+        );
+      }
     }
   };
   
