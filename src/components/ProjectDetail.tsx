@@ -1,30 +1,12 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { getTechIcon } from '../utils/techIcons';
 import ProjectMedia from './ProjectMedia';
-import projects, { getProjectDetailDescription } from '../data/projects';
+import projects, { getProjectDetailSections } from '../data/projects';
 
 const ProjectDetailSection = styled.section`
   padding: 60px 0;
-`;
-
-const BackLink = styled(Link)`
-  display: inline-flex;
-  align-items: center;
-  margin-bottom: 24px;
-  color: ${props => props.theme.text};
-  font-weight: 500;
-  transition: color 0.2s;
-  font-size: 0.9rem;
-  
-  &:hover {
-    color: ${props => props.theme.accent};
-  }
-  
-  i {
-    margin-right: 8px;
-  }
 `;
 
 const ProjectTitle = styled.h1`
@@ -71,32 +53,98 @@ const Paragraph = styled.p`
   }
 `;
 
+// Change BackLink from a Link to a button
+const BackLink = styled.button`
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 24px;
+  color: ${props => props.theme.text};
+  font-weight: 500;
+  transition: color 0.2s;
+  font-size: 0.9rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  
+  &:hover {
+    color: ${props => props.theme.accent};
+  }
+  
+  i {
+    margin-right: 8px;
+  }
+`;
+
+const ProjectSection = styled.section`
+  margin-top: -40px;
+  margin-bottom: -40px;
+`;
+
+const SectionTitle = styled.h2`
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 1.6rem;
+`;
+
+const SubheaderTitle = styled.h3`
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 1.3rem;
+`;
+
 const ProjectDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
+  const navigate = useNavigate(); // Use the navigate hook
+  
+  // Custom navigation handler function
+  const handleBackToProjects = () => {
+    // Navigate to home first
+    navigate('/');
+    
+    // After a short delay to ensure navigation completes, scroll to projects
+    setTimeout(() => {
+      const projectsSection = document.getElementById('projects');
+      if (projectsSection) {
+        // Get header height (60px is typical, adjust if your header is different)
+        const headerHeight = 60; // Adding extra padding for visual comfort
+        
+        // Calculate the position with offset
+        const elementPosition = projectsSection.offsetTop;
+        const offsetPosition = elementPosition - headerHeight;
+        
+        // Scroll to the calculated position
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }, 100);
+  };
   
   const project = projects.find(p => p.slug === slug);
+  const projectSections = getProjectDetailSections(slug || '');
   
   if (!project) {
     return (
       <ProjectDetailSection>
         <div className="container">
-          <BackLink to="/#projects"><i className="fas fa-arrow-left"></i> Back to Home</BackLink>
+          <BackLink onClick={handleBackToProjects}>
+            <i className="fas fa-arrow-left"></i> Back to Projects
+          </BackLink>
           <h1>Project Not Found</h1>
         </div>
       </ProjectDetailSection>
     );
   }
   
-  // Get the detailed description for the current project
-  const detailedDescription = getProjectDetailDescription(project.slug);
-  
-  // Split the description into paragraphs
-  const paragraphs = detailedDescription.split('\n\n');
-  
   return (
     <ProjectDetailSection>
       <div className="container">
-        <BackLink to="/#projects"><i className="fas fa-arrow-left"></i> Back to Home</BackLink>
+        <BackLink onClick={handleBackToProjects}>
+          <i className="fas fa-arrow-left"></i> Back to Projects
+        </BackLink>
         
         <ProjectTitle>{project.title}</ProjectTitle>
         <ProjectPeriod>{project.period}</ProjectPeriod>
@@ -110,14 +158,41 @@ const ProjectDetail: React.FC = () => {
           ))}
         </TechList>
         
+        {/* Main project media */}
+        {project.media && project.media.length > 0 && 
+          <ProjectMedia media={project.media} />
+        }
+        
         <ProjectContent>
-          {paragraphs.map((paragraph, index) => (
-            <Paragraph key={index}>{paragraph}</Paragraph>
+          {projectSections.map((section, index) => (
+            <ProjectSection key={index}>
+              <SectionTitle>{section.title}</SectionTitle>
+              
+              {section.content.split('\n\n').map((paragraph, pIndex) => (
+                <Paragraph key={pIndex}>{paragraph}</Paragraph>
+              ))}
+              
+              {/* Section media */}
+              {section.media && section.media.length > 0 && 
+                <ProjectMedia media={section.media} />
+              }
+              
+              {section.subheaders && section.subheaders.map((subheader, shIndex) => (
+                <div key={shIndex}>
+                  <SubheaderTitle>{subheader.title}</SubheaderTitle>
+                  
+                  {subheader.content.split('\n\n').map((paragraph, spIndex) => (
+                    <Paragraph key={spIndex}>{paragraph}</Paragraph>
+                  ))}
+                  
+                  {/* Subheader media */}
+                  {subheader.media && subheader.media.length > 0 && 
+                    <ProjectMedia media={subheader.media} />
+                  }
+                </div>
+              ))}
+            </ProjectSection>
           ))}
-          
-          {project.media && project.media.length > 0 && 
-            <ProjectMedia media={project.media} />
-          }
         </ProjectContent>
       </div>
     </ProjectDetailSection>

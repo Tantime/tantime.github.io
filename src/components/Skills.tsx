@@ -55,6 +55,7 @@ const Skills: React.FC = () => {
     { name: 'Python' },
     { name: 'C++' },
     { name: 'Postgres' },
+    { name: 'Swift' },
     { name: 'React' },
     { name: 'JavaScript' },
     { name: 'HTML' },
