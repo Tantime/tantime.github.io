@@ -163,26 +163,26 @@ The hardware implementation utilizes an NVIDIA Jetson platform integrated with L
 
 To ensure precise movement control, I fine-tuned PID controllers for both GPS-based pathing and autonomous steering, which significantly enhanced the vehicle's navigation accuracy and throttle control.`,
         media: [
-          {
-            type: 'video' as const,
-            url: '/assets/projects/autonomous-car/gps-laps.mov',
-            caption: 'Autonomous laps w/ GPS',
-          },
-          {
-            type: 'video' as const,
-            url: '/assets/projects/autonomous-car/opencv-laps.mov',
-            caption: 'Autonomous laps w/ OpenCV',
-          },
-          {
-            type: 'video' as const,
-            url: '/assets/projects/autonomous-car/remote-autonomous-laps.mov',
-            caption: 'Remote autonomous laps w/ deep learning',
-          },
-          {
-            type: 'video' as const,
-            url: '/assets/projects/autonomous-car/local-autonomous-laps.mov',
-            caption: 'Local autonomous laps w/ deep learning',
-          },
+          // {
+          //   type: 'video' as const,
+          //   url: '/assets/projects/autonomous-car/gps-laps.mov',
+          //   caption: 'Autonomous laps w/ GPS',
+          // },
+          // {
+          //   type: 'video' as const,
+          //   url: '/assets/projects/autonomous-car/opencv-laps.mov',
+          //   caption: 'Autonomous laps w/ OpenCV',
+          // },
+          // {
+          //   type: 'video' as const,
+          //   url: '/assets/projects/autonomous-car/remote-autonomous-laps.mov',
+          //   caption: 'Remote autonomous laps w/ deep learning',
+          // },
+          // {
+          //   type: 'video' as const,
+          //   url: '/assets/projects/autonomous-car/local-autonomous-laps.mov',
+          //   caption: 'Local autonomous laps w/ deep learning',
+          // },
           {
             type: 'video' as const,
             url: '/assets/projects/autonomous-car/vslam.mov',
